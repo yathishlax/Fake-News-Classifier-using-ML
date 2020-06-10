@@ -1,4 +1,5 @@
 Fake-News-Classifier
+
 Goal:
 This project is basically focused on identifying the fake news using NLP and machine learning.
 It is applied in following two vectorizing methods.
