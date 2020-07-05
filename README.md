@@ -1,48 +1,22 @@
-Fake-News-Classifier
+Fake News Classifier
 
-Goal:
-This project is basically focused on identifying the fake news using NLP and machine learning.
-It is applied in following two vectorizing methods.
-1.Bag of words model.
-2. TF-IDF model
+The goal of this project is to analyse the various news articles and accurately detect if the news is genuine or not.
+Fake news is a major concern in our society right now. It has gone hand-in-hand with the rise of the data-driven era – not a coincidence when you consider the sheer volume of data we are generating every second!
+Fake news is such a widespread issue that even the world’s leading dictionaries are trying to combat it in their own way. Here are two leading lights in that space taking a stance in recent years:
+•	Dictionary.com listed ‘misinformation’ as their Word of the Year in 2018
+•	Oxford Dictionary picked ‘post-truth’ as their Word of the Year a few years ago
+ 
+So what role has Machine Learning played in this? Machine learning Algorithms can be used to classify and predict if a news is fake after it has been trained or identified by using other techniques. Natural Language Processing (NLP) techniques are being used to analyse these fake articles and find a way to recognise the authenticity of the news being spread and broadcasted.
+The dataset used is contains a set of news articles, they contain: the titles, author information, the textual content of the articles and finally a label that defines it as true or false.
+The data was treated for missing values and explored before Natural Language Processing was used in cleaning the text of the articles and their titles. The Bag of Words model was applied using count vectorizer. Features with high frequency were considered and machine learning algorithms such as Multinomial Naïve Bayes, Passive Aggressive Classifier Algorithm and multinomial classifier with Hyperparameter were applied.
 
-Source:
-The source of this dataset is from Kaggle.com
-https://www.kaggle.com/c/fake-news/data#
-
-About the dataset:
-Dataset contains articles containing the fake news and so machine learning algorithms are used to classify them.
-It is split into train and test data for building the model.
-
-Features:
-id: unique id for a news article
-title: the title of a news article
-author: author of the news article
-text: the text of the article; could be incomplete
-label: a label that marks the article as potentially unreliable
-1: unreliable
-0: reliable
-
-Libraries Used:
-pandas- it offers data structures and operations for manipulating numerical tables and time series.
-Numpy – for numerical operations.
-Stopwords – It is used to remove stop words from the sentences.
-PorterStemmer – used for stemming, identifying the base stem word.
-CountVectorizer – it is used to convert a collection of text documents to a matrix of token counts in Bag of words model.
-TFIDFVectorizer – it is used to convert a collection of raw documents to a matrix of TF-IDF features. Where TF- IDF imputes weights to words based on TF*IDF.
-Sklearn - For Machine Learning operations.
-train_test_split – for splitting data into training and testing purpose.
-matplotlib.pyplot – for visualizing the observations
-metrics – to measure accuracy related factors such as confusion matrix, accuracy score etc.
-MultinomialNB – Navyes bayes classifier for predicting text data.
-PassiveAggressiveClassifier – Linear model classifier for predicting text data
+The best results were obtained using Passive Aggressive Classifier.
+ 
+Results:
+As can be seen from the image above:
+•	3126 articles were correctly identified as Fake News, which means 92.24% of the Fake News Articles were correctly identified.
+•	2419 articles were correctly identified as Real News, which means 91.42% of genuine articled were correctly identified.
+•	The overall accuracy of prediction achieved in this model was 91.9%
+Hence majority of the Fake News articled were correctly identified with a small margin for error. This can be utilized to successfully categorise and prevent the spread of misinformation in the form of fabricated Fake News.
 
 
-Approach
-
-•	Text Cleaning
-•	Vectorizing using CountVectorizer/TF-IDF
-•	Train test split
-•	Apply Models
-•	Hyperparameter tuning on best model
-•	Calculating accuracy of both CountVectorizer/TF-IDF
